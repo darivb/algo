@@ -34,8 +34,8 @@ function inOrder(node, array){
 
 describe('PreOrder', function() {
     it('Pre ordered array length should be equal to binary tree node count.', function() {
-        let nodeCount = 8;
-        let rootNode = Utils.generateBinaryTree(nodeCount);
+        let nodeCount  = 8;
+        let rootNode   = Utils.generateBinaryTree(nodeCount);
         let preOrdered = preOrder(rootNode, []);
 
         console.log(preOrdered);
@@ -45,10 +45,14 @@ describe('PreOrder', function() {
 
 describe('InOrder', function() {
     it('InOrdered array length should be equal to binary tree node count.', function() {
-        let nodeCount = 8;
-        let rootNode = Utils.generateBinaryTree(nodeCount);
+        let nodeCount = 10;
+        let rootNode  = Utils.generateBinaryTree(nodeCount);
         let inOrdered = inOrder(rootNode, []);
         console.log(inOrdered);
         assert.equal(nodeCount, inOrdered.length);
     });
 });
+
+let rootNode  = Utils.generateBinaryTree(6);
+console.log(rootNode);
+Utils.dump(rootNode);
